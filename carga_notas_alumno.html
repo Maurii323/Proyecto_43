@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Metadatos-->
+    <meta charset="utf-8">
+    <meta name="author" content="Corbalan, Arroyo, Flores">
+    <meta name="description" content="Carga de notas por alumno">
+    <meta name="keywords" content="html, CSS, JavaScript, React">
+    <meta name="viewport" content="width-device-width, initial-style=1" >
+    <!--Bootstrap de CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Bootstrap de Iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!--CSS-->
+    <link href="style.css" rel="stylesheet">
+     <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="imagenes/escuela.jpg">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <title>Carga Notas Docente</title>
+</head>
+<body>
+    <!--cabecera-->
+    <section class="cabecera section-general fondo-oscuro">
+        <div class="container-fluid"> <!--Contenedor responsivo-->
+            <div class="row text-center">
+                <div class="col-12 col-sm-8 "> <!--de las 12 columnas por defecto tomo 8-->
+                    Desarrollado por Nivel Terciario de la Escuela Superior de Comercio Nº 49 "J. J. de Urquiza"
+                </div>
+                <div class="col-12 col-sm-4"> 
+                    <img src="imagenes/escuela.jpg" width="50" alt="Logo de la escuela">
+                </div>
+            </div> 
+    </section>
+
+    <section class="logeado section-general">
+        <div class="row border color-row "> <!--se puede poner la cantidad de nombres de clases qeu necesite utilizar de css-->
+            <div class="col text-center alineacion-texto"> 
+                <h6>CARGA NOTAS POR ALUMNO</h6> 
+            </div>
+        </div> 
+    </section> 
+
+    <!--formulario-->
+    <section class="formulario section-general">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mx-auto mx-2 mx-md-0 text-center custom-border customer-content content">
+                    <div class="titulo-con-fondo border text-center alineacion-texto">
+                        <h6>MATERIAS del DOCENTE</h6>                       
+                    </div> 
+                    <button class="btn btn-primary margin-boton text-center" type="button" >Practica Profesionalizante</button>
+                    <button class="btn btn-primary margin-boton text-center" type="button" >Ingenieria de Software I</button>
+                    <button type="button" class="btn btn-outline-secondary ">DS 1° 2°</button>
+                    <button type="button" class="btn btn-outline-secondary ">DS 1° 3°</button>
+                    <button class="btn btn-primary margin-boton text-center" type="button" >Ingenieria de Software II</button>
+                    <button class="btn btn-primary margin-boton text-center" type="button" >Base de Datos I</button>
+                    <button class="btn btn-primary margin-boton text-center" type="button" >Base de Datos II</button>
+                    <button type="button" class="btn btn-outline-secondary ">DS 2° 1°</button>
+                </div>
+                <div class="col-md-8 mx-auto mx-2 mx-md-0 text-center custom-border customer-content">
+                    <div class="titulo-con-fondo border">
+                        <h4>Practica Profesionalizante</h4>
+                        <h6 class="text-left">Listado de alumnos</h6>
+                    </div>                
+                     <table class="table table-bordered table-striped ">
+                        <thead>
+                          <tr>
+                                <th class="espaciado">Legajo</th>
+                                <th class="espaciado">Nombre</th>
+                                <th class="espaciado">DNI</th>
+                                <th class="espaciado">Fecha</th>
+                                <th class="espaciado">Nota</th>
+                                <th class="espaciado">Comentario</th>
+                            </tr>
+                            <tr>
+                                <th class="espaciado"></th>
+                                <th class="espaciado"></th>
+                                <th class="espaciado"></th>
+                                <th class="espaciado"></th>
+                                <th class="espaciado">
+
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">+</button>
+
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content section-general border"><i class="bi bi-save-fill icono-persona"></i>
+                                            <div class="modal-header ">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">MATERIA:</h1>
+                                                
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-header">
+                                                <h2 class="modal-title fs-5" id="exampleModalLabel">curso:</h2>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                <div class="mb-3">
+                                                    <label for="recipient-name" class="col-form-label titulo-con-fondo border text-center alineacion-texto">NOTA:</label>
+                                                    <input type="text" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="message-text" class="col-form-label titulo-con-fondo border text-center alineacion-texto">COMENTARIO:</label>
+                                                    <textarea class="form-control" id="message-text"></textarea>
+                                                </div>
+                                                </form>
+                                            </div>
+                                                <button type="button" class="btn btn-primary alineacion-texto">GUARDAR</button>
+                                                                                                
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </th>
+                                                                            <th class="espaciado"></th>
+                                </tr>
+                            
+
+                        </thead>
+                   </table>
+                </div>
+            </div>
+        </div>
+    </section>     
+    
+
+    <!--consulta-->
+    <section class="footer section-general">
+            <div class="row border color-row text-center">
+                <div class="col justify-content-end"> 
+                    <button class="btn btn-primary" type="button">Volver <i class="bi bi-skip-backward-circle-fill icono-general"></i></button>
+                </div>                    
+        </div>
+    </section>
+    <!--Insertado de JavaScript de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
